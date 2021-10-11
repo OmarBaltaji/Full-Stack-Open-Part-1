@@ -1,12 +1,16 @@
 import React from 'react';
 import Part from './Part';
 
-const Content = (props) => (
-  <div>
-    <Part name={props.part1.name} exercises={props.part1.exercises} />
-    <Part name={props.part2.name} exercises={props.part2.exercises} />
-    <Part name={props.part3.name} exercises={props.part3.exercises} />
-  </div>
-);
+const Content = (props) => {
+  const partsJSX = props.parts.map((part, index) => 
+    <Part key={index} name={part.name} exercises={part.exercises} />
+  );
+
+  return (
+    <div>
+      {partsJSX}
+    </div>
+  );
+};
 
 export default Content;
