@@ -29,12 +29,18 @@ const App = () => {
       <Button handleClick={handleClick('neutral')} text='neutral' />
       <Button handleClick={handleClick('bad')} text='bad' />
       <h1>Statistics</h1>
-      <Statistics text={'good'} number={good} />
-      <Statistics text={'neutral'} number={neutral} />
-      <Statistics text={'bad'} number={bad} />
-      <Statistics text={'all'} number={sum} />
-      <Statistics text={'average'} number={avg} />
-      <Statistics text={'positive'} number={positivePercentage} />
+      {sum === 0 ? 
+        <div>No feedback given</div> 
+        :
+        <>
+          <Statistics text={'good'} number={good} />
+          <Statistics text={'neutral'} number={neutral} />
+          <Statistics text={'bad'} number={bad} />
+          <Statistics text={'all'} number={sum} />
+          <Statistics text={'average'} number={avg} />
+          <Statistics text={'positive'} number={positivePercentage} />  
+        </> 
+      }
     </div>
   );
 }
