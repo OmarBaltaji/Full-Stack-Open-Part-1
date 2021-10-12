@@ -33,12 +33,16 @@ const App = () => {
         <div>No feedback given</div> 
         :
         <>
-          <Statistics text={'good'} number={good} />
-          <Statistics text={'neutral'} number={neutral} />
-          <Statistics text={'bad'} number={bad} />
-          <Statistics text={'all'} number={sum} />
-          <Statistics text={'average'} number={avg} />
-          <Statistics text={'positive'} number={positivePercentage} />  
+          <table>
+            <tbody>
+              <Statistics text={'good'} number={good} />
+              <Statistics text={'neutral'} number={neutral} />
+              <Statistics text={'bad'} number={bad} />
+              <Statistics text={'all'} number={sum} />
+              <Statistics text={'average'} number={avg} />
+              <Statistics text={'positive'} number={positivePercentage} />     
+            </tbody>
+          </table>
         </> 
       }
     </div>
