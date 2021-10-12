@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Statistics = ({text, total}) => (
-  <div>{text} {total}</div>
+const Statistics = ({text, number}) => (
+  <div>{text} {number}</div>
 );
 
 export default Statistics;
